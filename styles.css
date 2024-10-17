@@ -55,7 +55,7 @@ nav ul li a:hover {
 
 .banner h2 {
     font-family: 'Playfair Display', serif; /* Elegant serif font */
-    font-size: 4em; /* Large font size */
+    font-size: 2em; /* Large font size */
     text-transform: uppercase;
     letter-spacing: 0.05em; /* Slightly decreased spacing */
     position: relative; /* For the text-shadow positioning */
@@ -68,7 +68,7 @@ nav ul li a:hover {
 
 .banner h3 {
     font-family: 'Playfair Display', serif; /* Elegant serif font */
-    font-size: 2.5em; /* Adjust size for h3 */
+    font-size: 1.5em; /* Adjust size for h3 */
     text-transform: uppercase;
     letter-spacing: 0.05em; /* Slightly decreased spacing */
     position: relative; /* For the text-shadow positioning */
@@ -244,7 +244,7 @@ footer {
 }
 
 /* Media Queries for mobile */
-@media (min-width: 768px) {
+@media (min-width: 400px) {
     .products-container {
         flex-direction: row; /* Change to row for larger screens */
         flex-wrap: wrap;
