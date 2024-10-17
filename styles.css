@@ -154,7 +154,7 @@ footer {
 }
 
 /* Media Queries for mobile */
-@media (min-width: 768px) {
+@media (min-width: 400px) {
     .products-container {
         flex-direction: row; /* Change to row for larger screens */
         flex-wrap: wrap;
