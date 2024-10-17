@@ -1,34 +1,16 @@
-/* Color Variables */
-:root {
-    --primary-color: #4CAF50; /* Main Green Color */
-    --secondary-color: #f2f2f2; /* Light Grey for Backgrounds */
-    --accent-color: #FF9800; /* Accent Orange for Highlights */
-    --text-color: #333; /* Darker Color for Text */
-    --light-text-color: #fff; /* White Text Color */
-}
-
-/* General Styles */
+/* Base styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6; /* Improved readability */
-    background-color: var(--secondary-color); /* Light background color */
-    color: var(--text-color); /* Dark text color */
+    line-height: 1.6;
+    background-color: #f0f4f8; /* Light background color */
 }
 
-header {
-    background-color: var(--primary-color);
-    color: var(--light-text-color);
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+.header, .navbar {
+    background: #4caf50; /* Deep green for a festive look */
+    padding: 1em;
+    text-align: center;
 }
 
 .logo {
@@ -36,175 +18,163 @@ header {
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
+    list-style: none;
     padding: 0;
-    display: flex;
 }
 
 nav ul li {
-    margin-left: 20px;
+    display: inline-block;
+    margin: 0 1em;
 }
 
 nav ul li a {
-    color: var(--light-text-color);
     text-decoration: none;
-    transition: color 0.3s; /* Smooth color transition */
+    color: #fff; /* White text for better contrast */
+    font-weight: bold; /* Bold text for emphasis */
+    transition: color 0.3s; /* Transition for hover effect */
 }
 
 nav ul li a:hover {
-    color: var(--accent-color); /* Change to accent color on hover */
+    color: #ffd700; /* Golden color on hover */
 }
 
+/* Banner styles */
 .banner {
-    background-color: var(--secondary-color);
-    padding: 50px 20px;
+    position: relative; /* Positioning context for the banner */
+    width: 100%; /* Full width */
+    overflow: hidden; /* Hide overflow */
+}
+
+.banner img {
+    width: 100%; /* Full width */
+    height: 400px; /* Fixed height for uniformity */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+    display: block; /* Block display for proper centering */
+}
+
+/* Wishes Section */
+#wishes {
+    padding: 1em;
     text-align: center;
-}
-
-.banner h2 {
-    font-size: 2.5em; /* Larger font size for headings */
-    margin: 10px 0;
-}
-
-.banner h3 {
-    font-size: 1.5em; /* Sub-heading font size */
-    margin: 10px 0;
+    background-color: #fff; /* White background for clarity */
+    margin: 1em; /* Margin to separate from other sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .wishes-message {
-    text-align: center;
-    font-size: 1.2em;
-    margin: 10px 0;
-    color: var(--text-color); /* Softer color for text */
+    color: #4caf50; /* Deep green color for text */
+    font-size: 1.2em; /* Slightly larger font */
+    margin: 0.5em 0; /* Spacing between wishes */
 }
 
 /* Products Section */
+#products {
+    padding: 1em;
+    text-align: center;
+    background-color: #fff; /* White background for clarity */
+    margin: 1em; /* Margin to separate from other sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .products-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+    flex-direction: column; /* Stack products vertically */
+    align-items: center;
 }
 
 .product-item {
-    background-color: var(--light-text-color); /* White background for product items */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px;
+    border: 1px solid #ccc;
+    margin: 0.5em;
+    padding: 1em;
     text-align: center;
-    width: calc(25% - 20px); /* Default width for larger screens */
-    transition: transform 0.3s, box-shadow 0.3s; /* Animation effects */
-}
-
-.product-item:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+    width: 90%; /* Make products responsive */
+    background-color: #fff; /* White background for products */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .product-item img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px; /* Rounded image corners */
+    display: block; /* Ensure block display for centering */
+    margin: 0 auto; /* Center the image */
 }
 
+.product-item h3 {
+    font-size: 1.5em; /* Larger font for product title */
+    color: #4caf50; /* Deep green for title */
+}
+
+/* Price styling */
 .price {
-    font-weight: bold;
-    color: var(--text-color); /* Darker color for prices */
+    font-size: 1.5em; /* Larger font for price */
+    color: #4caf50; /* Match the theme color */
+    margin: 0.5em 0; /* Spacing around price */
 }
 
-/* Button Styles */
+/* Button styling */
 .btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: var(--light-text-color);
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    padding: 0.5em 1em;
+    background: #4caf50; /* Button color */
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background 0.3s; /* Transition for hover effect */
 }
 
 .btn:hover {
-    background-color: var(--accent-color); /* Change to accent color on hover */
-    transform: scale(1.05); /* Slightly enlarge button on hover */
+    background: #388e3c; /* Darker green on hover */
 }
 
 /* Contact Section */
-.contact-container {
-    padding: 20px;
+#contact {
+    padding: 1em;
     text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact-item {
-    margin: 10px 0;
+    margin: 1em 0;
 }
 
-/* Footer Styles */
+/* Footer styles */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #333; /* Dark background for footer */
-    color: var(--light-text-color);
+    padding: 1em;
+    background: #4caf50; /* Matching footer background */
+    color: #fff; /* White text for footer */
 }
 
-/* Media Queries for Mobile View */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        padding: 10px 0;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    .banner {
-        padding: 30px 10px;
-    }
-
+/* Media Queries for mobile */
+@media (min-width: 768px) {
     .products-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row; /* Change to row for larger screens */
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .product-item {
-        width: 90%; /* Full width for mobile */
+        width: calc(33.33% - 1em); /* Adjust width for larger screens */
+        margin: 0.5em;
     }
 
-    .wishes-message {
-        font-size: 1em; /* Adjust font size for mobile */
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar {
-        padding: 10px;
+    nav ul li {
+        display: inline; /* Horizontal navigation for larger screens */
     }
 
-    .logo {
-        max-width: 80px;
+    .contact-container {
+        flex-direction: row; /* Align contact items horizontally */
     }
 
-    .banner h2 {
-        font-size: 2em; /* Adjusted heading size */
-    }
-
-    .banner h3 {
-        font-size: 1.2em; /* Adjusted sub-heading size */
-    }
-
-    .wishes-message {
-        font-size: 0.9em; /* Smaller font size for mobile */
-    }
-
-    .products-container {
-        padding: 10px; /* Padding adjustment for smaller screens */
+    .contact-item {
+        margin: 0 1em;
     }
 }
