@@ -59,8 +59,7 @@ nav ul li a:hover {
 .banner {
     background-image: url('https://i.pinimg.com/originals/26/59/43/265943c921d06c8bacdf04b7828295d0.jpg');
     background-size: cover;
-    height: 60px;
-    width: 50px;/* Adjusted height for mobile */
+    height: 40vh; /* Adjusted height for mobile */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,7 +69,7 @@ nav ul li a:hover {
 }
 
 .banner h2, .banner h3 {
-    font-size: 24px; /* Reduced font size for mobile */
+    font-size: 24px; /* Adjusted font size for mobile */
     margin: 10px 0;
     font-weight: bold;
     color: #ff6f00;
@@ -207,13 +206,13 @@ nav ul li a:hover {
 }
 
 #contact h2 {
-    font-size: 24px; /* Reduced font size for mobile */
+    font-size: 24px; /* Adjusted font size for mobile */
     margin-bottom: 20px;
     animation: colorfulText 2s infinite alternate;
 }
 
 #contact p {
-    font-size: 16px; /* Reduced font size for mobile */
+    font-size: 16px; /* Adjusted font size for mobile */
     margin-bottom: 30px;
 }
 
@@ -224,7 +223,7 @@ nav ul li a:hover {
     padding: 10px 20px; /* Reduced padding for mobile */
     border: none;
     border-radius: 30px;
-    font-size: 16px; /* Reduced font size for mobile */
+    font-size: 16px; /* Adjusted font size for mobile */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
@@ -234,9 +233,14 @@ nav ul li a:hover {
 }
 
 /* Media Queries for Mobile Responsiveness */
-@media (max-width: 400px) {
+@media (max-width: 768px) {
+    .banner {
+        height: 30vh; /* Further reduced height for mobile */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
     .banner h2, .banner h3 {
-        font-size: 22px; /* Adjusted font size for mobile */
+        font-size: 18px; /* Adjusted font size for mobile */
     }
 
     .product-item, .blog-item {
