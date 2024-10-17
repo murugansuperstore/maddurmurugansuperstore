@@ -59,7 +59,8 @@ nav ul li a:hover {
 .banner {
     background-image: url('https://i.pinimg.com/originals/26/59/43/265943c921d06c8bacdf04b7828295d0.jpg');
     background-size: cover;
-    height: 60vh; /* Adjusted height for mobile */
+    height: 60px;
+    width: 50px;/* Adjusted height for mobile */
     display: flex;
     align-items: center;
     justify-content: center;
