@@ -233,7 +233,7 @@ nav ul li a:hover {
 }
 
 /* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
     .banner h2, .banner h3 {
         font-size: 22px; /* Adjusted font size for mobile */
     }
