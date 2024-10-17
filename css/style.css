@@ -503,7 +503,7 @@ video {
     color:var(--orange);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 400px) {
     html {
         font-size: 55%; /* Adjust font size for better readability on mobile */
     }
@@ -514,7 +514,7 @@ video {
     }
 
     .navbar {
-        flex-direction: row; /* Arrange links horizontally */
+        flex-direction: column; /* Arrange links horizontally */
     }
 
     .navbar a {
