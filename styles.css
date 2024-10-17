@@ -9,7 +9,7 @@ body {
 
 .header, .navbar {
     background: #4caf50; /* Deep green for a festive look */
-    padding: 1em;
+    padding: 1.5em;
     text-align: center;
 }
 
@@ -230,7 +230,7 @@ h3 {
 /* Footer styles */
 footer {
     text-align: center;
-    padding: 1em;
+    padding: 1.5em;
     background: #4caf50; /* Matching footer background */
     color: #fff; /* White text for footer */
 }
