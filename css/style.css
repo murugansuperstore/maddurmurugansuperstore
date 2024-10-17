@@ -82,7 +82,7 @@ section{
     display: flex;
     justify-content: center; /* Center the logo */
     width: 30%;
-    margin-bottom: 10px; /* Space between logo and navbar */
+    margin-bottom: 30px; /* Space between logo and navbar */
 }
 
 .logo img {
@@ -529,6 +529,9 @@ video {
     .image-content {
         margin-top: 0; /* Remove margin for larger screens */
     }
+    .logo{
+        max-with: 50%;
+       
 
     .thiruvalluvar-img {
         max-width: 50%; /* Adjust image size for larger screens */
