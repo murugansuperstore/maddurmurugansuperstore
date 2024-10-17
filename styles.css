@@ -211,6 +211,25 @@ h3 {
     background: #388e3c; /* Darker green on hover */
 }
 
+#offer {
+    text-align: center;
+    padding: 1em;
+    background-color: #fff; /* White background for clarity */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 1em; /* Margin to separate from other sections */
+}
+
+#offer h2 {
+    color: #ff4500; /* Offer title color */
+    font-size: 1.8em; /* Larger font for offer title */
+}
+
+#countdown {
+    font-size: 1.5em; /* Font size for countdown */
+    color: #4caf50; /* Deep green for countdown text */
+}
+
 /* Contact Section */
 #contact {
     padding: 1em;
