@@ -1,0 +1,330 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header */
+/* Header */
+header {
+    background-color: #ff9800;
+    padding: 10px; /* Reduced padding for mobile */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row; /* Change to column for mobile if needed */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: cente;
+     margin-top: 10px;/* Center text */
+}
+
+.logo {
+    max-width: 150px;
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Remove margins to center properly */
+    border-radius: 50%; /* If you still want rounded corners */
+}
+
+.navbar h1 {
+    display: none; /* Remove h1 if it's not needed */
+}
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;/* Stack menu items vertically */
+    gap: 10px; /* Reduced gap for mobile */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px; /* Reduced font size for mobile */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;
+}
+
+
+/* Banner Section */
+.banner {
+    background-image: url('https://i.pinimg.com/originals/26/59/43/265943c921d06c8bacdf04b7828295d0.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+    position: relative;
+}
+
+.banner h2, .banner h3 {
+    font-size: 80px; /* Reduced font size for mobile */
+    margin:10px 0;
+    justify-content: center;
+    font-weight: bold;
+    color: #ff6f00;
+    animation: colorfulGlow 2s infinite alternate;
+    text-shadow: 0 0 10px #ff6f00, 0 0 20px #ff6f00;
+}
+
+/* Colorful Glow Animation */
+@keyframes colorfulGlow {
+    0% { text-shadow: 0 0 10px #ff6f00, 0 0 20px #ff6f00, 0 0 30px #ff6f00; }
+    25% { text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081; }
+    50% { text-shadow: 0 0 10px #2196f3, 0 0 20px #2196f3, 0 0 30px #2196f3; }
+    75% { text-shadow: 0 0 10px #4caf50, 0 0 20px #4caf50, 0 0 30px #4caf50; }
+    100% { text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b, 0 0 30px #ffeb3b; }
+}
+
+/* Wishes Section */
+#wishes {
+    padding: 30px 20px; /* Reduced padding for mobile */
+    background-color: #ffe082;
+    text-align: center;
+    color: #ff6f00;
+}
+
+.wishes-message {
+    font-size: 20px; /* Reduced font size for mobile */
+    margin: 15px 0;
+    font-weight: bold;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #ff6f00, 0 0 20px #ff6f00, 0 0 30px #ff6f00; }
+    100% { text-shadow: 0 0 20px #ff9100, 0 0 30px #ff9100, 0 0 40px #ff9100; }
+}
+
+/* Product Section */
+#products {
+    padding: 40px 20px; /* Reduced padding for mobile */
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Reduced gap for mobile */
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.product-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px; /* Reduced padding for mobile */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 90%; /* Make it take 90% width on mobile */
+    max-width: 250px; /* Set max-width for larger screens */
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.product-item h3 {
+    font-size: 16px; /* Reduced font size for mobile */
+    margin-bottom: 10px;
+}
+
+.product-item .price {
+    font-size: 18px; /* Reduced font size for mobile */
+    color: #ff9800;
+    margin-bottom: 15px;
+}
+
+.product-item .btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 14px; /* Reduced font size for mobile */
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.product-item .btn:hover {
+    background-color: #ff5722;
+    transform: scale(1.05);
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Reviews Section */
+#reviews {
+    padding: 40px 20px; /* Reduced padding for mobile */
+    background-color: #ffeb3b;
+    color: black;
+    text-align: center;
+}
+
+.review-container p {
+    background-color: white;
+    padding: 10px; /* Reduced padding for mobile */
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Blogs Section */
+#blogs {
+    padding: 40px 20px; /* Reduced padding for mobile */
+    background-color: #e0f7fa;
+    text-align: center;
+}
+
+.blogs-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.blog-item {
+    background-color: white;
+    padding: 15px; /* Reduced padding for mobile */
+    border-radius: 10px;
+    transition: transform 0.3s;
+    width: 90%; /* Make it take 90% width on mobile */
+    max-width: 250px; /* Set max-width for larger screens */
+}
+
+.blog-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section */
+#contact {
+    padding: 40px 20px; /* Reduced padding for mobile */
+    background: linear-gradient(135deg, #ff6f00, #ff9800, #ffeb3b);
+    text-align: center;
+    color: #fff;
+}
+
+#contact h2 {
+    font-size: 30px; /* Reduced font size for mobile */
+    margin-bottom: 20px;
+    animation: colorfulText 2s infinite alternate;
+}
+
+#contact p {
+    font-size: 18px; /* Reduced font size for mobile */
+    margin-bottom: 30px;
+}
+
+/* Button Style */
+#contact .btn {
+    background-color: #fff;
+    color: #ff9800;
+    padding: 10px 20px; /* Reduced padding for mobile */
+    border: none;
+    border-radius: 30px;
+    font-size: 16px; /* Reduced font size for mobile */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#contact .btn:hover {
+    background-color: #ffeb3b;
+    transform: scale(1.05);
+}
+
+/* Colorful Text Animation */
+@keyframes colorfulText {
+    0% {
+        color: #ff6f00;
+        text-shadow: 0 0 10px #ff6f00, 0 0 20px #ff6f00;
+    }
+    25% {
+        color: #ff4081;
+        text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081;
+    }
+    50% {
+        color: #2196f3;
+        text-shadow: 0 0 10px #2196f3, 0 0 20px #2196f3;
+    }
+    75% {
+        color: #4caf50;
+        text-shadow: 0 0 10px #4caf50, 0 0 20px #4caf50;
+    }
+    100% {
+        color: #ffeb3b;
+        text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Keyframe Animations */
+@keyframes glowText {
+    from {
+        text-shadow: 2px 2px 10px #ffeb3b, 0 0 20px #ff5722;
+    }
+    to {
+        text-shadow: 4px 4px 15px #ff5722, 0 0 30px #ff9800;
+    }
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .banner h2, .banner h3 {
+        font-size: 30px; /* Further reduce font size for mobile */
+    }
+
+    #contact h2 {
+        font-size: 28px; /* Adjust contact section font size for mobile */
+    }
+
+    .product-item {
+        width: 90%; /* Ensure products take full width */
+        max-width: none; /* Remove max-width restriction for mobile */
+    }
+
+    .blog-item {
+        width: 90%; /* Ensure blogs take full width */
+        max-width: none; /* Remove max-width restriction for mobile */
+    }
+}
