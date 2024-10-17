@@ -15,6 +15,7 @@ body {
 
 .logo {
     max-width: 100px;
+    border-radius: 50%;
 }
 
 nav ul {
@@ -38,11 +39,6 @@ nav ul li a:hover {
     color: #ffd700; /* Golden color on hover */
 }
 
-/* Banner styles */
-/* Banner styles */
-/* Banner styles */
-/* Banner styles */
-/* Banner styles */
 /* Banner styles */
 .banner {
     position: relative; /* Positioning context for the banner */
@@ -79,7 +75,6 @@ nav ul li a:hover {
     margin-top: 0; /* Remove gap above h3 */
 }
 
-
 /* Gold shine animation */
 @keyframes shine {
     0% {
@@ -108,9 +103,6 @@ nav ul li a:hover {
             0 0 15px rgba(255, 215, 0, 0.8); /* Slightly increased glow */
     }
 }
-
-
-
 
 /* Wishes Section */
 #wishes {
@@ -244,27 +236,37 @@ footer {
 }
 
 /* Media Queries for mobile */
-@media (min-width: 780px) {
+@media (max-width: 780px) {
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+    
+    nav ul li {
+        margin: 0.5em 0; /* Spacing between items */
+        display: block; /* Stack items vertically */
+    }
+
     .products-container {
-        flex-direction: row; /* Change to row for larger screens */
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column; /* Stack products vertically */
     }
 
     .product-item {
-        width: calc(33.33% - 1em); /* Adjust width for larger screens */
-        margin: 0.5em;
+        width: 100%; /* Full width for products on mobile */
     }
 
-    nav ul li {
-        display: inline; /* Horizontal navigation for larger screens */
+    h2, h3 {
+        font-size: 1.5em; /* Reduce heading size for mobile */
     }
 
+    .wishes-message {
+        font-size: 1em; /* Smaller font for wishes on mobile */
+    }
+    
     .contact-container {
-        flex-direction: row; /* Align contact items horizontally */
+        flex-direction: column; /* Stack contact items vertically */
     }
 
     .contact-item {
-        margin: 0 1em;
+        margin: 0.5em 0; /* Adjust margins for contact items */
     }
 }
