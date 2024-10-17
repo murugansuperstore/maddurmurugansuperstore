@@ -15,7 +15,7 @@ body {
 /* Header */
 header {
     background-color: #ff9800;
-    padding: 10px; /* Reduced padding for mobile */
+    padding: 10px;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -23,36 +23,31 @@ header {
 
 .navbar {
     display: flex;
-    flex-direction: column; /* Change to column for mobile */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    text-align: center; /* Corrected the typo from 'cente' */
-    margin-top: 10px; /* Center text */
+    flex-direction: column; /* Stack items vertically for mobile */
+    align-items: center; /* Center items horizontally */
+    text-align: center;
+    margin-top: 10px;
 }
 
 .logo {
-    max-width: 150px;
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 15px; /* Remove margins to center properly */
-    border-radius: 50%; /* If you still want rounded corners */
-}
-
-.navbar h1 {
-    display: none; /* Remove h1 if it's not needed */
+    max-width: 100px; /* Reduced logo size for mobile */
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
     flex-direction: column; /* Stack menu items vertically */
-    align-items: center; /* Center items horizontally */
-    gap: 10px; /* Reduced gap for mobile */
+    align-items: center;
+    gap: 10px; /* Space between menu items */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 20px; /* Adjusted font size for mobile */
+    font-size: 18px; /* Adjusted font size for mobile */
     transition: color 0.3s;
 }
 
@@ -64,17 +59,17 @@ nav ul li a:hover {
 .banner {
     background-image: url('https://i.pinimg.com/originals/26/59/43/265943c921d06c8bacdf04b7828295d0.jpg');
     background-size: cover;
-    height: 70vh; /* Reduced height for mobile */
+    height: 60vh; /* Adjusted height for mobile */
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    text-align: left;
+    text-align: center;
     padding: 20px;
     position: relative;
 }
 
 .banner h2, .banner h3 {
-    font-size: 30px; /* Further reduce font size for mobile */
+    font-size: 24px; /* Reduced font size for mobile */
     margin: 10px 0;
     font-weight: bold;
     color: #ff6f00;
@@ -92,7 +87,7 @@ nav ul li a:hover {
 
 .wishes-message {
     font-size: 18px; /* Reduced font size for mobile */
-    margin: 15px 0;
+    margin: 10px 0;
     font-weight: bold;
     animation: glow 2s infinite alternate;
 }
@@ -106,20 +101,19 @@ nav ul li a:hover {
 
 .products-container {
     display: flex;
-    justify-content: center;
-    gap: 20px; /* Reduced gap for mobile */
-    flex-wrap: wrap;
-    margin-top: 20px;
+    flex-direction: column; /* Stack product items vertically */
+    align-items: center; /* Center products */
+    gap: 20px; /* Space between products */
 }
 
 .product-item {
     background-color: white;
     border-radius: 10px;
-    padding: 15px; /* Reduced padding for mobile */
+    padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 90%; /* Ensure it takes 90% width on mobile */
-    max-width: 250px; /* Set max-width for larger screens */
+    width: 90%; /* Make it take 90% width on mobile */
+    max-width: 300px; /* Max width for larger screens */
     text-align: center;
 }
 
@@ -128,7 +122,6 @@ nav ul li a:hover {
     height: auto;
     margin-bottom: 10px;
     border-radius: 10px;
-    transition: transform 0.3s;
 }
 
 .product-item h3 {
@@ -154,16 +147,11 @@ nav ul li a:hover {
 
 .product-item .btn:hover {
     background-color: #ff5722;
-    transform: scale(1.05);
 }
 
 .product-item:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.product-item img:hover {
-    transform: scale(1.1);
 }
 
 /* Reviews Section */
@@ -178,7 +166,7 @@ nav ul li a:hover {
     background-color: white;
     padding: 10px; /* Reduced padding for mobile */
     border-radius: 10px;
-    margin: 10px;
+    margin: 10px 0; /* Margin for spacing */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -191,9 +179,9 @@ nav ul li a:hover {
 
 .blogs-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-direction: column; /* Stack blog items vertically */
+    align-items: center; /* Center blogs */
+    gap: 20px; /* Space between blogs */
 }
 
 .blog-item {
@@ -202,12 +190,11 @@ nav ul li a:hover {
     border-radius: 10px;
     transition: transform 0.3s;
     width: 90%; /* Ensure blogs take full width */
-    max-width: 250px; /* Set max-width for larger screens */
+    max-width: 300px; /* Set max-width for larger screens */
 }
 
 .blog-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Contact Section */
@@ -243,25 +230,20 @@ nav ul li a:hover {
 
 #contact .btn:hover {
     background-color: #ffeb3b;
-    transform: scale(1.05);
 }
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
-    .banner {
-        height: 60vh; /* Further reduce height for mobile */
-    }
-
     .banner h2, .banner h3 {
-        font-size: 24px; /* Further reduce font size for mobile */
-    }
-
-    #contact h2 {
-        font-size: 24px; /* Adjust contact section font size for mobile */
+        font-size: 22px; /* Adjusted font size for mobile */
     }
 
     .product-item, .blog-item {
         width: 95%; /* Ensure products and blogs take nearly full width */
         max-width: none; /* Remove max-width restriction for mobile */
+    }
+
+    #contact h2 {
+        font-size: 22px; /* Adjust contact section font size for mobile */
     }
 }
