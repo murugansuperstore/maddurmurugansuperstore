@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f0f4f8; /* Light background color */
+    background-color: #f0f8ff; /* Light background color */
 }
 
 .header, .navbar {
@@ -39,18 +39,78 @@ nav ul li a:hover {
 }
 
 /* Banner styles */
+/* Banner styles */
+/* Banner styles */
+/* Banner styles */
+/* Banner styles */
+/* Banner styles */
 .banner {
     position: relative; /* Positioning context for the banner */
     width: 100%; /* Full width */
     overflow: hidden; /* Hide overflow */
+    background: transparent; /* Transparent background */
+    padding: 2em;
+    text-align: center;
 }
 
-.banner img {
-    width: 100%; /* Full width */
-    height: 400px; /* Fixed height for uniformity */
-    object-fit: cover; /* Cover to maintain aspect ratio */
-    display: block; /* Block display for proper centering */
+.banner h2 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    font-size: 4em; /* Large font size */
+    text-transform: uppercase;
+    letter-spacing: 0.05em; /* Slightly decreased spacing */
+    position: relative; /* For the text-shadow positioning */
+    background: linear-gradient(45deg, #FFD700, #FFEC8B); /* Gradient for a shiny gold effect */
+    -webkit-background-clip: text;
+    color: transparent; /* This makes the gradient show through the text */
+    animation: shine 5s ease-in-out infinite, text-glow 2s ease-in-out infinite alternate;
+    margin-bottom: 0.2em; /* Decrease gap below h2 */
 }
+
+.banner h3 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    font-size: 2.5em; /* Adjust size for h3 */
+    text-transform: uppercase;
+    letter-spacing: 0.05em; /* Slightly decreased spacing */
+    position: relative; /* For the text-shadow positioning */
+    background: linear-gradient(45deg, #FFD700, #FFEC8B); /* Gradient for a shiny gold effect */
+    -webkit-background-clip: text;
+    color: transparent; /* This makes the gradient show through the text */
+    animation: shine 5s ease-in-out infinite, text-glow 2s ease-in-out infinite alternate;
+    margin-top: 0; /* Remove gap above h3 */
+}
+
+
+/* Gold shine animation */
+@keyframes shine {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+/* Text glow animation for subtle glowing effect */
+@keyframes text-glow {
+    0% {
+        text-shadow:
+            0 0 2px rgba(255, 223, 0, 0.3), /* Reduced shadow intensity */
+            0 0 5px rgba(255, 223, 0, 0.3),
+            0 0 10px rgba(255, 223, 0, 0.3);
+    }
+    100% {
+        text-shadow:
+            0 0 5px rgba(255, 223, 0, 0.6), /* Subtle shadow */
+            0 0 10px rgba(255, 223, 0, 0.6),
+            0 0 15px rgba(255, 215, 0, 0.8); /* Slightly increased glow */
+    }
+}
+
+
+
 
 /* Wishes Section */
 #wishes {
@@ -68,14 +128,44 @@ nav ul li a:hover {
     margin: 0.5em 0; /* Spacing between wishes */
 }
 
+/* Enhanced Heading styles with animation */
+h2, h3 {
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center align */
+    animation: scale-up 0.6s ease forwards; /* Animation for scaling up */
+}
+
+/* Colorful font gradient for h2 and h3 */
+h2 {
+    background: linear-gradient(to right, #ff7f50, #ff1493, #1e90ff, #32cd32); /* Colorful gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Apply gradient to text */
+    animation-duration: 0.8s; /* Longer duration for h2 */
+}
+
+h3 {
+    background: linear-gradient(to right, #ff4500, #ff8c00, #32cd32, #00ced1); /* Another colorful gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Apply gradient to text */
+    animation-duration: 0.6s; /* Shorter duration for h3 */
+    animation-delay: 0.2s; /* Delay for h3 to appear after h2 */
+}
+
+/* Keyframes for scale animation */
+@keyframes scale-up {
+    0% {
+        transform: scale(1); /* Initial scale */
+        opacity: 0; /* Start from invisible */
+    }
+    100% {
+        transform: scale(1.2); /* End with larger scale */
+        opacity: 1; /* Fully visible */
+    }
+}
+
 /* Products Section */
 #products {
     padding: 1em;
-    text-align: center;
-    background-color: #fff; /* White background for clarity */
-    margin: 1em; /* Margin to separate from other sections */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .products-container {
@@ -154,7 +244,7 @@ footer {
 }
 
 /* Media Queries for mobile */
-@media (min-width: 400px) {
+@media (min-width: 768px) {
     .products-container {
         flex-direction: row; /* Change to row for larger screens */
         flex-wrap: wrap;
