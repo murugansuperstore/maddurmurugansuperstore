@@ -49,7 +49,7 @@ nav ul li a:hover {
     width: 100%; /* Full width */
     overflow: hidden; /* Hide overflow */
     background: transparent; /* Transparent background */
-    padding: 2em;
+    padding: 1em;
     text-align: center;
 }
 
@@ -244,7 +244,7 @@ footer {
 }
 
 /* Media Queries for mobile */
-@media (min-width: 400px) {
+@media (min-width: 780px) {
     .products-container {
         flex-direction: row; /* Change to row for larger screens */
         flex-wrap: wrap;
