@@ -503,7 +503,7 @@ video {
     color:var(--orange);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 720px) {
     html {
         font-size: 55%; /* Adjust font size for better readability on mobile */
     }
